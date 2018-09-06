@@ -1,6 +1,6 @@
 const Messages = require('../models/Messages.js')
 const moment = require('moment')
-const url = 'mongodb://heroku_anitali:ivon0401@ds147592.mlab.com:47592/heroku_nw6fgxm8';
+const url = 'mongodb://anitali:ivon0401@ds245532.mlab.com:45532/chat';
 
 class SocketHander{
   constructor() {
