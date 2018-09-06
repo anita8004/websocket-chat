@@ -1,7 +1,6 @@
 const Messages = require('../models/Messages.js')
 const moment = require('moment')
-const url = process.env.MONGOLAB_URI || 'mongodb://anitali:ivon0401@ds245532.mlab.com:45532/chat';
-//'mongodb://anitali:ivon0401@ds245532.mlab.com:45532/chat'
+const url = process.env.MONGODB_URI || 'mongodb://anitali:ivon0401@ds245532.mlab.com:45532/chat';
 
 class SocketHander{
   constructor() {
