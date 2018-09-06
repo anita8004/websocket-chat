@@ -60,6 +60,6 @@ io.on('connection', async (socket) => {
   })
 })
 
-server.listen(3001)
+server.listen(process.env.PORT || 3001)
 
 module.exports = app;
