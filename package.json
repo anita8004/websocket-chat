@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm2 start app.js",
-    "release": "set NODE_ENV=production&&npm2 start app.js",
-    "dev": "set NODE_ENV=development&&npm2 start app.js"
+    "start": "pm2 start app.js",
+    "release": "set NODE_ENV=production&&pm2 start app.js",
+    "dev": "set NODE_ENV=development&&pm2 start app.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
