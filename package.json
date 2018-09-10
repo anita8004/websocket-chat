@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon app.js",
-    "release": "set NODE_ENV=production&&nodemon app.js",
-    "dev": "set NODE_ENV=development&&nodemon app.js"
+    "start": "npm2 start app.js",
+    "release": "set NODE_ENV=production&&npm2 start app.js",
+    "dev": "set NODE_ENV=development&&npm2 start app.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -17,6 +17,7 @@
     "mongoose": "^5.2.13",
     "morgan": "~1.9.0",
     "nodemon": "^1.18.4",
+    "pm2": "^3.0.4",
     "socket.io": "^2.1.1"
   }
 }
