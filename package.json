@@ -3,15 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "pm2 start app.js",
-    "release": "set NODE_ENV=production&&pm2 start app.js",
-    "dev": "set NODE_ENV=development&&pm2 start app.js"
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "~4.0"
   },
   "dependencies": {
+    "authtoken": "^1.0.21",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
+    "express-sslify": "^1.2.0",
     "http-errors": "~1.6.2",
     "moment": "^2.22.2",
     "mongoose": "^5.2.13",

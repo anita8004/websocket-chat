@@ -7,8 +7,10 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+const authtoken = require('authtoken');
 var app = express();
 const server = require('http').Server(app);
+const enforce = require('express-sslify');
 const io = require('socket.io')(server);
 const SocketHander = require('./socket/index.js')
 
@@ -16,6 +18,10 @@ const SocketHander = require('./socket/index.js')
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(new authtoken({
+  mongodb: 'mongodb://u9jm2cn1hskxsp0:LFg1Hwzr6nDvqlSfQP4H@b3b9aoeakowtlea-mongodb.services.clever-cloud.com:27017/b3b9aoeakowtlea'
+}));
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -60,6 +66,6 @@ io.on('connection', async (socket) => {
   })
 })
 
-server.listen('http://websocket-chat.cleverapps.io')
+server.listen(process.env.PORT, '0.0.0.0')
 
 module.exports = app;
