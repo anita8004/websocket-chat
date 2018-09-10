@@ -60,6 +60,6 @@ io.on('connection', async (socket) => {
   })
 })
 
-server.listen(process.env.PORT || 3001)
+server.listen('http://websocket-chat.cleverapps.io')
 
 module.exports = app;
