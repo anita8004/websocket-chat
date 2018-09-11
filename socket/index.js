@@ -6,7 +6,7 @@ class SocketHander{
     this.db;
   }
   connect() {
-    this.db = require('mongoose').connect('mongodb://u9jm2cn1hskxsp0:LFg1Hwzr6nDvqlSfQP4H@b3b9aoeakowtlea-mongodb.services.clever-cloud.com:27017/b3b9aoeakowtlea')
+    this.db = require('mongoose').connect('mongodb://anitali:ivon0401@ds245532.mlab.com:45532/chat')
     this.db.Promise = global.Promise
   }
   getMessages() {

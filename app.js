@@ -50,7 +50,6 @@ io.on('connection', async (socket) => {
   const history = await socketHander.getMessages()
   const socketid = socket.id
   io.to(socketid).emit("history", history);
-//  io.emit("history", history);
   socket.on("message", (obj) => {
     socketHander.storeMessages(obj);
     io.emit("message", obj);
@@ -60,6 +59,6 @@ io.on('connection', async (socket) => {
   })
 })
 
-server.listen(3001)
+server.listen(process.env.PORT || 3001)
 
 module.exports = app;
