@@ -1,4 +1,4 @@
-socket = io.connect('wss://websock-mongodb.herokuapp.com');
+var socket = io()
 document.querySelector('button').addEventListener('click', () => {
   Send();
 });
