@@ -12,7 +12,7 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const SocketHander = require('./socket/index.js')
 
-var port = process.env.PORT || 3001;
+var port = 3001;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
