@@ -1,4 +1,4 @@
-socket = io.connect('ws://0.0.0.0:3001');
+socket = io.connect('ws://localhost:3001');
 document.querySelector('button').addEventListener('click', () => {
   Send();
 });
