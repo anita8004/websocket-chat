@@ -1,5 +1,14 @@
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelector('button').addEventListener('click', () => {
+var socket = io();
+  
+  socket.on("connect", function () {
+      console.log('connect')
+  });
+  
+  socket.on("disconnect", function () {
+      console.log('disconnect')
+  });
+  
+  document.querySelector('button').addEventListener('click', function() {
     Send();
   });
 
@@ -12,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     let data = {
       name: name,
-      msg: msg,
-    }
+      msg: msg
+    }    
     socket.emit('message', data)
     document.querySelector('#msg').value = ''
   }
@@ -49,6 +58,3 @@ document.addEventListener('DOMContentLoaded', function(){
     let chat = document.querySelector('.chats')
     chat.scrollTo(0, chat.scrollHeight)
   }
-})
-
-

@@ -54,10 +54,6 @@ io.on('connection', async (socket) => {
     socketHander.storeMessages(obj);
     io.emit("message", obj);
   });
-  socket.on("send", (obj) => {
-    socketHander.storeMessages(obj);
-    io.emit("message", obj);
-  });
   io.on('disconnection', () => {
     console.log("a user go out");
   })
