@@ -4,7 +4,7 @@
 
 Github：https://github.com/anita8004/websocket-chat
 
-主要參考資料：https://dotblogs.com.tw/explooosion/2018/01/27/170320
+主要參考資料：[Node.js - Express + MongoDB + Socket.IO (以聊天室為範例)](https://dotblogs.com.tw/explooosion/2018/01/27/170320)
 
 其他參考資料：
 
