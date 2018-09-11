@@ -1,4 +1,4 @@
-socket = io.connect('ws://websocket-chat.cleverapps.io');
+socket = io.connect('ws://0.0.0.0:3001');
 document.querySelector('button').addEventListener('click', () => {
   Send();
 });
