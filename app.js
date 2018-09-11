@@ -50,8 +50,11 @@ io.on('connection', async (socket) => {
   const history = await socketHander.getMessages()
   const socketid = socket.id
   io.to(socketid).emit("history", history);
-//  io.emit("history", history);
   socket.on("message", (obj) => {
+    socketHander.storeMessages(obj);
+    io.emit("message", obj);
+  });
+  socket.on("send", (obj) => {
     socketHander.storeMessages(obj);
     io.emit("message", obj);
   });
