@@ -12,6 +12,8 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const SocketHander = require('./socket/index.js')
 
+var port = process.env.PORT || 3001;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -60,6 +62,8 @@ io.on('connection', async (socket) => {
   })
 })
 
-server.listen(3001)
+server.listen(port, 'websocket-chat.cleverapps.io', function(){
+  console.log(port)
+})
 
 module.exports = app;
