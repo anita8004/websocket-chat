@@ -60,6 +60,6 @@ io.on('connection', async (socket) => {
   })
 })
 
-server.listen(3001)
+server.listen('websock-mongodb.herokuapp.com')
 
 module.exports = app;
