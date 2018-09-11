@@ -44,7 +44,6 @@ app.use(function(err, req, res, next) {
 
 
 io.on('connection', async (socket) => {
-  console.log('a user connected');
   socketHander = new SocketHander();
   socketHander.connect();
   const history = await socketHander.getMessages()
@@ -54,9 +53,6 @@ io.on('connection', async (socket) => {
     socketHander.storeMessages(obj);
     io.emit("message", obj);
   });
-  io.on('disconnection', () => {
-    console.log("a user go out");
-  })
 })
 
 server.listen(process.env.PORT || 3001)
